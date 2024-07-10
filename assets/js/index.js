@@ -28,3 +28,21 @@ const myAge = 13;
 const myName = 'Georg';
 console.log(myName, myAge)
 
+//Операції
+let b = 10;
+b=0;
+console.log(b)
+
+let c = 1+2;
+console.log(c)
+let d = 2*6;
+console.log(d)
+let e = Math.sqrt(100);
+console.log(e)
+
+let age = prompt('How old are you?')
+console.log('You are '+ age + ' years old')  
+
+let sum = 5;
+sum += 5
+console.log(sum)
