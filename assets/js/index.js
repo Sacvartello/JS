@@ -46,3 +46,7 @@ console.log('You are '+ age + ' years old')
 let sum = 5;
 sum += 5
 console.log(sum)
+const x = Number(prompt('Введіть х'))
+const y = Number(prompt('Введіть y'))
+const z = Number(prompt('Введіть z'))
+console.log(x + y + z)
