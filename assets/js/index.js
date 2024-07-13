@@ -1,18 +1,14 @@
-const isLogIn = true;
-if (isLogIn) {
-  console.log("Привіт!");
-} else {
-  console.log("Try agan!");
+let sideCount = 1
+const totalSideAmount = 4
+while (sideCount<= totalSideAmount) {
+  console.log('Йти прямо')
+  console.log('Повернути праворуч')
+  sideCount ++
 }
 
-const tall = Number(prompt("Введіть ваш зріст:"));
+let n = null
+do {
+  n = Number(prompt('Введіть число'))
+} while (!Number.isFinite(n))
 
-if (tall >= 175) {
-  if (tall === 175) {
-    console.log("Ваш зріст дорівнює середньому зросту людини!");
-  } else {
-    console.log("Вітаю! Ваш зріст більше ніж середній зріст людини)");
-  }
-} else {
-  console.log("Ваш зріст менше ніж середній зріст людини(");
-}
+console.log(n*n)
