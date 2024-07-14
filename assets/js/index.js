@@ -24,3 +24,11 @@ const TOTAL_PAGE_AMOUNT = 20;
 for (let currentPage = 10; currentPage <= TOTAL_PAGE_AMOUNT; currentPage += 2) {
   console.log("Page:", currentPage);
 }
+
+const greeting = 'Hello, '
+const userName = prompt("Enter your name:")
+console.log(`${greeting}, ${userName}`)
+
+const age =3
+const result = age >= 18 ? 'Ти повнолітній' : "Ти не повнолітній"
+console.log(result)
