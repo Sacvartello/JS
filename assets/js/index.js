@@ -1,34 +1,23 @@
-let sideCount = 1;
-const totalSideAmount = 4;
-while (sideCount <= totalSideAmount) {
-  console.log("Йти прямо");
-  console.log("Повернути праворуч");
-  sideCount++;
+function myFunction (userName){
+  const greeting = `Hi, ${userName}`
+  return greeting
 }
+myFunction("me")
+myFunction('oooo')
+const a = myFunction('Ivo');
+console.log('a:', a)
 
-let n = null;
-do {
-  n = Number(prompt("Введіть число"));
-} while (!Number.isFinite(n));
-console.log(n * n);
-
-let i = 1;
-let t = 1;
-while (i < 10) {
-  i++;
-  t *= i;
+function pow (a, b){
+  return a**b
 }
-console.log(t);
-
-const TOTAL_PAGE_AMOUNT = 20;
-for (let currentPage = 10; currentPage <= TOTAL_PAGE_AMOUNT; currentPage += 2) {
-  console.log("Page:", currentPage);
-}
-
-const greeting = 'Hello, '
-const userName = prompt("Enter your name:")
-console.log(`${greeting}, ${userName}`)
-
-const age =3
-const result = age >= 18 ? 'Ти повнолітній' : "Ти не повнолітній"
+const result = pow(4, 5)
 console.log(result)
+
+function sumFromAToB (from, to){
+  let sum = 0
+  for(i=from; i<= to; i++){
+    sum += i
+  }
+  return sum
+}
+console.log(sumFromAToB(1, 6))
