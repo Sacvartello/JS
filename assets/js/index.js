@@ -1,3 +1,4 @@
+//Function Declaration
 function myFunction (userName){
   const greeting = `Hi, ${userName}`
   return greeting
@@ -21,3 +22,17 @@ function sumFromAToB (from, to){
   return sum
 }
 console.log(sumFromAToB(1, 6))
+//Function Expression
+const functionPow = function(a, b=1){
+  return (a**b)
+}
+console.log(functionPow(3, 7))
+
+function sumFromAToB (to, from=1){
+  let sum = 0
+  for(i=from; i<= to; i++){
+    sum += i
+  }
+  return sum
+}
+console.log(sumFromAToB(6))
