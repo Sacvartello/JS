@@ -1,38 +1,36 @@
-//Function Declaration
-function myFunction (userName){
-  const greeting = `Hi, ${userName}`
-  return greeting
+//Об'єкти
+const obj1 = {
+  userName: 'Fred',
+  phoneNumber: 9877772622,
+  age: 18,
+  password: 'qwerty'
 }
-myFunction("me")
-myFunction('oooo')
-const a = myFunction('Ivo');
-console.log('a:', a)
+console.log(obj1)
 
-function pow (a, b){
-  return a**b
-}
-const result = pow(4, 5)
-console.log(result)
+const see = obj1.age
+console.log(obj1)
 
-function sumFromAToB (from, to){
-  let sum = 0
-  for(i=from; i<= to; i++){
-    sum += i
-  }
-  return sum
-}
-console.log(sumFromAToB(1, 6))
-//Function Expression
-const functionPow = function(a, b=1){
-  return (a**b)
-}
-console.log(functionPow(3, 7))
+obj1.age = 26
+console.log(obj1)
 
-function sumFromAToB (to, from=1){
-  let sum = 0
-  for(i=from; i<= to; i++){
-    sum += i
-  }
-  return sum
+obj1.email= 'djjnco@gmail.com'
+console.log(obj1)
+
+delete obj1.password
+console.log(obj1)
+
+
+const car = {
+  mark: 'Toyota',
+  model: 'Stolen',
+  ageOfCar: 2017,
+  numbers: 'AI1764CS',
+  color: 'red'
 }
-console.log(sumFromAToB(6))
+console.log(car)
+
+car.color = 'white'
+delete car.ageOfCar
+car.manName = 'Fred'
+console.log(car)
+
