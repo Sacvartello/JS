@@ -1,79 +1,27 @@
-//Об'єкти
-const obj1 = {
-  userName: 'Fred',
-  phoneNumber: 9877772622,
-  age: 18,
-  password: 'qwerty'
+//Arrey
+const months = ['December', 'November', 'October'];
+console.log(months)
+for(i = 0; i < months.length; i++){
+  console.log(months[i])
 }
-console.log(obj1)
 
-const see = obj1.age
-console.log(obj1)
-
-obj1.age = 26
-console.log(obj1)
-
-obj1.email= 'djjnco@gmail.com'
-console.log(obj1)
-
-delete obj1.password
-console.log(obj1)
-
-
-const car = {
-  mark: 'Toyota',
-  model: 'Stolen',
-  ageOfCar: 2017,
-  numbers: 'AI1764CS',
-  color: 'red'
-}
-console.log(car)
-
-car.color = 'white'
-delete car.ageOfCar
-car.manName = 'Fred'
-console.log(car)
-
-const obj2 = {
-  firstName: 'Ted',
-  lastName: 'Jonaphen',
-  phoneNumber: 9877772622,
-  age: 18,
-  password: 'qwerty',
-  getFullName(){
-    return `${this.firstName} ${this.lastName}`
-  },
-  changeAge(newAge){
-    this.age = newAge
+const numbers = [1, 3423, -523, -55.35509, 0]
+for (i = 0; i < months.length; i++){
+  if (numbers[i] > 0){
+    console.log(numbers[i])
   }
 }
 
-const userFullName = obj2.getFullName();
-console.log(userFullName)
+const sumNum = [Math.random(), Math.random()]
 
-obj2.changeAge('19')
-console.log(obj2)
+console.log(sumNum)
 
-for(let prop in car){
-  console.log(`car.${prop} = ${car[prop]}`)
+const sum = calcSum(sumNum)
+console.log(sum)
+function calcSum(numbs){
+  let sum = 0
+  for(i = 0; i < sumNum.length; i++){
+    sum += sumNum[i]
+  }
+  return sum
 }
-
-//Функції конструктори
-function User(firstName, lastName, age){
-  this.name = firstName;
-  this.surname = lastName;
-  this.age = age;
-}
-
-const userProto = {};
-userProto.changeAge = function (newAge){
-  this.age = newAge;
-}
-userProto.changeAge = function (){
-  this.age++;
-}
-User.prototype = userProto;
-
-const user1 = new User('Test1','Testovich1', 20)
-console.log(user1)
-
