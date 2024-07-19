@@ -57,3 +57,23 @@ console.log(obj2)
 for(let prop in car){
   console.log(`car.${prop} = ${car[prop]}`)
 }
+
+//Функції конструктори
+function User(firstName, lastName, age){
+  this.name = firstName;
+  this.surname = lastName;
+  this.age = age;
+}
+
+const userProto = {};
+userProto.changeAge = function (newAge){
+  this.age = newAge;
+}
+userProto.changeAge = function (){
+  this.age++;
+}
+User.prototype = userProto;
+
+const user1 = new User('Test1','Testovich1', 20)
+console.log(user1)
+
