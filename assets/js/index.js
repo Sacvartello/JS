@@ -25,3 +25,24 @@ function calcSum(numbs){
   }
   return sum
 }
+
+//Методи масивів
+const num = [10, 20]
+console.log(num);
+num.pop()
+console.log(num);
+num.push(30)
+console.log(num);
+num.shift()
+console.log(num);
+num.unshift(5)
+console.log(num);
+
+const num2 = [100, 200, 300, 400, 500]
+console.log(num2);
+const num2Part1 = num2.slice(0, 3)
+console.log(num2Part1);
+const num2Part2 = num2.slice(3, 5)
+console.log(num2Part2);
+num2.splice(0, 2, 150, 250)
+console.log(num2);
