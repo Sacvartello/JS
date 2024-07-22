@@ -46,3 +46,29 @@ const num2Part2 = num2.slice(3, 5)
 console.log(num2Part2);
 num2.splice(0, 2, 150, 250)
 console.log(num2);
+
+//Методи перебору масивів
+const arrey1 = [1,2,3,4,5]
+arrey1.forEach(function nFunc (item, index, arrey1){
+  console.log(`item[${index}] = ${item}`);
+  console.log(arrey1);
+})
+
+function xFunc(item){
+  return item**2
+}
+const Fmap = arrey1.map(xFunc)
+console.log(Fmap);
+
+const numers = [52,69,1488,1161]
+function isOdd (item){
+  return item % 2 === 1
+}
+const arrOdd = numers.filter(isOdd)
+console.log(arrOdd);
+
+function find1488 (item){
+  return item === 1488
+}
+const num1488 = numers.filter(find1488)
+console.log(num1488);
