@@ -1,57 +1,50 @@
-//Arguments
-function res(operation){
-  let oper
-  if(operation=== '+'){
-    oper = 0
-    for(let i = 1; i < arguments.length; i++ ){
-      oper += arguments[i]
-    }
-  } else if(operation === '*'){
-    oper = 1
-    for(let i = 1; i < arguments.length; i++ ){
-      oper *= arguments[i]
-    }
-  } else {
-    return undefined
-  }
-  return oper
+function Phone(id, brand, model, makeYear, color, isNfs, price) {
+  this.id = id;
+  this.brand = brand;
+  this.model = model;
+  this.makeYear = makeYear;
+  this.color = color;
+  this.isNfs = isNfs;
+  this.price = price;
 }
-const resOfOper = res('*',1,2,3,4,5,6)
-console.log(resOfOper);
-//Rest-параметри
-function sum(...num) {
-  function howToReduse(acum, item){
-    return acum+item
-  }
-  const sum = num.reduce(howToReduse)
-  return sum
+
+const phones = []
+
+const PHONE_COUNT = 200
+
+for(let i = 0; i < PHONE_COUNT; i++){
+  const phone = new Phone(
+    i+1,
+    Math.random() > 0.5 ? 'Redmi' : 'Tecno',
+    `Note ${Math.trunc(Math.random() * 15 + 1)}`,
+    2010 + Math.trunc(Math.random()*15),
+    Math.random() > 0.5 ? 'blue' : 'black',
+    Math.random() > 0.5,
+    6000 + Math.trunc(Math.random() *8000)
+  );
+  phones.push(phone)
 }
-const res1 = sum(1,2,3,4,5,6)
-console.log('res1 :', res1);
-//Arrow function
-
-//Повний варіант
-// const fullAge = (age)=>{
-//   if (age >= 18){
-//     return true
-//   } else {
-//     return false
-//   }
-// }
-// console.log(fullAge(18));
-
-//Скорочений варіант
-const fullAge = age=> age >= 18
-console.log(fullAge(18));
-
-//Привітання на різних мовах
-const greetingOptions = {
-  en: 'Hello',
-  ua: 'Вітаю',
-  fr: 'Bonjue'
+console.log('Усі телефони');
+console.table(phones);
+//1 Телефони дорожче 8000
+const isGreaterThen10000 = function (item) {
+  return item.price >=10000
 }
-const greeting = (lang, userName) => `${greetingOptions[lang]} ${userName}`
+const phone10000 = phones.filter(isGreaterThen10000)
+console.log('Телефони дорожче 10000');
+console.table(phone10000);
+//2 Телефони пізніші 2020
+const isGreaterThen2020 = function (item) {
+  return item.makeYear >=2020
+}
+const phone2020 = phones.filter(isGreaterThen2020)
+console.log('Телефони пізніші 2020');
+console.table(phone2020);
+//5 Всі телефони зі знижкою 10%
+const salesPhones = phones.map(p => {
+  const phoneCopy = {...p };
+  phoneCopy.price = Math.round(phoneCopy.price * 0.90)
+  return phoneCopy
+});
 
-console.log(greeting('en', 'Test'));
-console.log(greeting('ua', 'Vova'));
-console.log(greeting('fr', 'Francisco'));
+console.table(salesPhones);
