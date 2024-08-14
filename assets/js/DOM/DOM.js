@@ -1,20 +1,18 @@
-const rootEl = document.getElementById('root');
-console.log('rootEl :>> ', rootEl);
-console.dir(rootEl);
+const presskMeBtn = document.getElementById('btn1')
+const pressBtn1 = function (event) {
+    console.log('Btn was clicked');
+};
+presskMeBtn.onclick = pressBtn1
 
-const divEls = document.getElementsByTagName('div');
-console.log('divEls :>> ', divEls);
+const noClickMeBtn = document.getElementById('btn2')
+const clickbtn2 = function (event) {
+    alert('Virus instaling...');
+};
+noClickMeBtn.addEventListener('click', clickbtn2);
+presskMeBtn.onclick = null
 
-const divRoot2 = divEls[0];
-
-const contentDivs = document.getElementsByClassName('content');
-console.log('contentDivs :>> ', contentDivs);
-
-const rootEl3 = document.querySelector('#root');
-console.log('rootEl3 :>> ', rootEl3);
-
-const divEls1 = document.querySelectorAll('div');
-console.log('divEls1 :>> ', divEls1);
-
-const classEl = document.querySelectorAll('.content')
-console.log(classEl);
+const deadliestBtn = document.getElementById('btn3')
+const funcForBtn3 = function (event) {
+    alert('Your computer is hacked!!!');
+};
+deadliestBtn.addEventListener('click', funcForBtn3);
