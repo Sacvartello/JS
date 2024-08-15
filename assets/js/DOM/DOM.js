@@ -1,18 +1,21 @@
-const presskMeBtn = document.getElementById('btn1')
-const pressBtn1 = function (event) {
-    console.log('Btn was clicked');
-};
-presskMeBtn.onclick = pressBtn1
+//Атрибути
+const p1 = document.querySelector('#p1')
+console.log(p1.title);
 
-const noClickMeBtn = document.getElementById('btn2')
-const clickbtn2 = function (event) {
-    alert('Virus instaling...');
-};
-noClickMeBtn.addEventListener('click', clickbtn2);
-presskMeBtn.onclick = null
+p1.hidden = true
 
-const deadliestBtn = document.getElementById('btn3')
-const funcForBtn3 = function (event) {
-    alert('Your computer is hacked!!!');
+const p2 = document.querySelector('#p2')
+p2.style.color= 'red'
+p2.setAttribute('style', 'background-color: yellow;')
+
+const imgAttr = {
+    src: 'https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_640.jpg',
+    alt: 'cat',
 };
-deadliestBtn.addEventListener('click', funcForBtn3);
+
+const img1= document.querySelector('img')
+
+img1.src = imgAttr.src
+img1.alt = imgAttr.alt
+
+img1.setAttribute('style', 'width: 400px;');
