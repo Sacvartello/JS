@@ -14,7 +14,7 @@ class Stack{
         return this._size === 0
     }
     push(value){
-        if(size >= maxSize){
+        if(this._size >= this._maxSize){
             throw new RangeError('Stack is full')
         }
         this[`_${this._size}`] = value
@@ -33,4 +33,49 @@ class Stack{
     pick(){
         return this[`_${this._size - 1}`]
     }
+}
+
+function isRight (str){
+    const stack = new Stack(str.length)
+    for (const symb of str) {
+        if(symb ==='('){
+            stack.push(symb)
+        } 
+        if(stack.isEmpty){
+            return false
+        }
+        if(symb === ')' && stack.pick() === '('){
+            stack.pop()
+        }
+    }
+    return stack.isEmpty
+}
+
+const brackets = {
+    '(':')',
+    '{':'}',
+    '[':']',
+    '<':'>'
+}
+function isR (str, brackets){
+    const stack = new Stack(str.length)
+    const closeBrackets = Object.values(brackets)
+    for (const symb of str) {
+        if(brackets[symb]){
+            stack.push(symb)
+            continue
+        } 
+        if(stack.isEmpty && closeBrackets.includes(symb)){
+            return false
+        }
+        const lastItemFromStack = stack.pick()
+        const correctCloseBracket = brackets[lastItemFromStack]
+        if(symb === correctCloseBracket){
+            stack.pop()
+            continue
+        } if(closeBrackets.includes(symb)){
+            return false
+        }
+    }
+    return stack.isEmpty
 }
