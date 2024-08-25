@@ -1,22 +1,28 @@
-//Створення Елементів
-// const elem = document.createElement('button')
-// const section = document.querySelector('section')
-// elem.textContent = 'text'
-// section.append(elem)
+//Події
+// const nListBtn = document.querySelectorAll('button')
+// for (const btn of nListBtn) {
+//     btn.addEventListener('click', click)
+// }
+// function click(event){
+//     console.log(event.target.textContent);
+// }
 
 //Task
-const section = document.createElement('section')
-const btn = document.createElement('button')
-const p = document.createElement('p')
-const body = document.body
-p.textContent = 'text'
-btn.textContent = 'click'
-body.append(section)
-section.append(p,btn)
+// const nListBtn2 = document.querySelectorAll('button')
+// for (const btn of nListBtn2) {
+//     btn.addEventListener('click', color)
+// }
 
-//Події Task
-const newP = document.querySelector('#p')
-newP.addEventListener('click', click)
-function click(){
-    alert('ха-ха-ха, попався! На текст клікати не можна')
+// function color (event){
+//     event.target.style.color = `${event.target.textContent}`
+// }
+
+//2
+const nListBtn3 = document.querySelectorAll('button')
+for (const btn of nListBtn3) {
+    btn.addEventListener('click', text)
+}
+function text (event){
+    console.log(event.target.textContent);
+    event.target.removeEventListener('click', text)
 }
