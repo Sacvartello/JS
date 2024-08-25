@@ -1,21 +1,22 @@
-//Атрибути
-const p1 = document.querySelector('#p1')
-console.log(p1.title);
+//Створення Елементів
+// const elem = document.createElement('button')
+// const section = document.querySelector('section')
+// elem.textContent = 'text'
+// section.append(elem)
 
-p1.hidden = true
+//Task
+const section = document.createElement('section')
+const btn = document.createElement('button')
+const p = document.createElement('p')
+const body = document.body
+p.textContent = 'text'
+btn.textContent = 'click'
+body.append(section)
+section.append(p,btn)
 
-const p2 = document.querySelector('#p2')
-p2.style.color= 'red'
-p2.setAttribute('style', 'background-color: yellow;')
-
-const imgAttr = {
-    src: 'https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_640.jpg',
-    alt: 'cat',
-};
-
-const img1= document.querySelector('img')
-
-img1.src = imgAttr.src
-img1.alt = imgAttr.alt
-
-img1.setAttribute('style', 'width: 400px;');
+//Події Task
+const newP = document.querySelector('#p')
+newP.addEventListener('click', click)
+function click(){
+    alert('ха-ха-ха, попався! На текст клікати не можна')
+}
