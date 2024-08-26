@@ -1,28 +1,51 @@
-//Події
-// const nListBtn = document.querySelectorAll('button')
-// for (const btn of nListBtn) {
-//     btn.addEventListener('click', click)
-// }
-// function click(event){
-//     console.log(event.target.textContent);
-// }
-
 //Task
-// const nListBtn2 = document.querySelectorAll('button')
-// for (const btn of nListBtn2) {
-//     btn.addEventListener('click', color)
+const body = document.body
+
+const section = document.querySelector('.sec1')
+const article = document.querySelector('.art1')
+const div = document.querySelector('.div1')
+// //1
+// function handler1 (event){
+//     console.log(event.target.localName);
 // }
 
-// function color (event){
-//     event.target.style.color = `${event.target.textContent}`
+// div.addEventListener('click', handler1)
+// //2
+// function handler2(event){
+//     console.log('----------------------------');
+//     console.log('target', event.target);
+//     console.log('currentTarget', event.currentTarget);
 // }
 
-//2
-const nListBtn3 = document.querySelectorAll('button')
-for (const btn of nListBtn3) {
-    btn.addEventListener('click', text)
+// body.addEventListener('click', handler2)
+// section.addEventListener('click', handler2)
+// article.addEventListener('click', handler2)
+// div.addEventListener('click', handler2)
+// //3
+// function handler3(event){
+//     console.log('----------------------------');
+//     console.log('target', event.target);
+//     console.log('currentTarget', event.currentTarget);
+//     if (event.currentTarget===section) {
+//         event.stopPropagation()
+//     }
+// }
+
+// body.addEventListener('click', handler3, true)
+// section.addEventListener('click', handler3, true)
+// article.addEventListener('click', handler3, true)
+// div.addEventListener('click', handler3, true)
+//4
+function handler4(event){
+    if (event.currentTarget=== event.target) {
+        event.stopPropagation()
+    }
+    console.log('----------------------------');
+    console.log('target', event.target);
+    console.log('currentTarget', event.currentTarget);
 }
-function text (event){
-    console.log(event.target.textContent);
-    event.target.removeEventListener('click', text)
-}
+
+body.addEventListener('click', handler4)
+section.addEventListener('click', handler4)
+article.addEventListener('click', handler4)
+div.addEventListener('click', handler4)
