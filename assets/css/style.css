@@ -1,19 +1,13 @@
-.background{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(128, 128, 128, 0.534);
-    justify-content: center;
-    align-items: center;
-    display:none;
+/* Task */
+section {
+    width: 300px;
+    height: 300px;
+    background-color: bisque;
 }
 
-.modal-window{
-    width: 200px;
-    height: 300px;
-    background-color: white;
-    border: 2px, solid, black;
-    display:none;
+
+div {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
 }
