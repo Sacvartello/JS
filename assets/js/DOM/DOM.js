@@ -1,53 +1,32 @@
-const section = document.querySelector('section')
-const article = document.querySelector('article')
-class Game {
-    constructor(scoreElement) {
-       this.count = 0;
-        this.scoreElement = scoreElement
-    }
+function handler1(event){
+    const STEP = 10
+    const box = event.currentTarget.body.children.box
+    const x = box.offsetLeft
+    const y = box.offsetTop
+    console.dir();
+    switch (event.code) {
+        case 'ArrowUp':{
+            box.style.top = `${y - STEP}px`
+            break;
+        }
+        
+        case 'ArrowDown':{
+            box.style.top = `${y + STEP}px`
+            break;
+        }
 
-    get count() {
-        return this._count
-    }
+        case 'ArrowLeft':{
+            box.style.left = `${x - STEP}px`
+            break;
+        }
+        case 'ArrowRight':{
+            box.style.left = `${x + STEP}px`
+            break;
+        }
 
-    set count(v) {
-        this._count = v;
-    }
-
-    increment() {
-        ++this.count;
-        this.rerender();
-        return this.count;
-    }
-
-    decrement() {
-        --this.count;
-        this.rerender();
-        return this.count;
-    }
-
-    rerender(){
-        this.scoreElement.textContent = `Score: ${this.count}`;
+        default: {
+            break;
+        }
     }
 }
-
-//Task
-const game = new Game(article)
-function count(event){
-    if(event.target === event.currentTarget) {
-        game.decrement(); 
-    } else {
-        game.increment();
-    }
-
-        const div = event.currentTarget.children.box
-        const w = getRandom(0, event.currentTarget.offsetWidth - (div.offsetWidth/2))
-        const h = getRandom(0, event.currentTarget.offsetHeight - (div.offsetHeight/2))
-        div.style.top = `${h}px`
-        div.style.left = `${w}px`
-}   
-section.addEventListener('click', count)
-
-function getRandom(min, max){
-    return Math.floor(Math.random() * (max - min + 1))+ min
-}
+document.addEventListener('keydown', handler1)
