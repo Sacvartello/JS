@@ -1,12 +1,5 @@
-const menuContainer = document.querySelector('.menu-container')
+const btns = document.querySelectorAll('button')
 
-function change(event){
-    event.stopPropagation()
-    event.currentTarget.classList.toggle('change')
-    showMenu(event)
-}
-function showMenu(event){
-    const sideMenu = document.querySelector('.side-menu')
-    sideMenu.classList.toggle('show')
-}
-menuContainer.addEventListener('click', change, true)
+btns[0].addEventListener('click', function (event) {
+    console.log(event.target.dataset.abraCadabra);
+})
