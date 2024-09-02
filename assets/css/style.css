@@ -1,46 +1,12 @@
-.menu-container {
-    display: inline-block;
-    cursor: pointer;
-    position: fixed;
-    top: 3%;
-    right: 3%;
-    z-index: 3;
-  }
-
-.bar {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
-  .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-
-  }
-
-  .change .bar2 {opacity: 0;}
-
-  .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
-
-  }
-.side-menu{
-    width: 20vw;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.651);
-    color: white;
-    font-size: 1.6em;
-    display: none;
+.red{
+  background-color: red;
+  border: 2px solid red;
 }
-.show{
-    display: block;
+.green{
+  background-color: green;
+  border: 2px solid green;
 }
-.side-menu li{
-    margin: 10% 0 ;
+.blue{
+  background-color: blue;
+  border: 2px solid blue;
 }
