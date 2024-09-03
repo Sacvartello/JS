@@ -1,12 +1,19 @@
-.red{
-  background-color: red;
-  border: 2px solid red;
+form{
+  width: 20vh;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  border: 2px solid black;
 }
-.green{
-  background-color: green;
-  border: 2px solid green;
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
 }
-.blue{
-  background-color: blue;
-  border: 2px solid blue;
+
+form *{
+  margin: 3% 0 ;
 }
