@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/DOM/Slider.js" defer></script>
-    <script src="./assets/js/DOM/DOM.js" defer> </script>
-  </head>
-  <body>
+    <script src="./assets/js/DOM/DOM.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
     <form>
-      <label>
-        Name
-        <input  type="text" name="user">
-      </label>
-      <label>
-        Rules
-        <input type="checkbox" name="rules">
-      </label>
-      <button type="submit">Click me</button>
+        <label>
+            Type your name
+        <input type="text" name="firstName"/>
+        </label>
+        <label>
+            Type your lastname
+        <input type="text" name="lastName" />
+        </label>
+        <label>
+            Type your email
+        <input type="email" name="email" />
+        </label>
+        <label>
+            Figure password
+            <div class="icon-wrapper">
+              <input type="password" name="pass"/>
+              <span class="pass-icon">&</span>
+            </div>
+        <label>
+           Repeat password
+        <input type="password" name="passRepeat"/>
+    </label>
+    <label>Birthday
+        <input type="date" name="birthday" />
+    </label>
+        <label>
+        <input type="checkbox" name="agreement">
+        Agree with rules
+        </label>
+        <button type="submit">Click me</button>
     </form>
-  </body>
+</body>
 </html>

@@ -1,19 +1,40 @@
-form{
-  width: 20vh;
+body {
+  display: flex;
+  height: 98vh;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 20vw;
   min-width: 200px;
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
   padding: 3%;
-  border: 2px solid black;
 }
 
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 98vh;
+form * {
+  margin: 2% 0;
 }
 
-form *{
-  margin: 3% 0 ;
+.error-text {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.valid {
+  background-color: lightgreen;
+}
+
+.invalid {
+  background-color: lightcoral;
+}
+.icon-wrapper{
+  position: relative;
+}
+.pass-icon{
+  position: absolute;
+  top: 1%;
+  left: 80%;
 }
