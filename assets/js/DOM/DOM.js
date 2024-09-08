@@ -1,8 +1,14 @@
-//JSON
-const obj = {
-    n:'g',
-    g:111
+//setTimeout
+function tic() {
+    console.log('tic');
 }
-const str = JSON.stringify(obj)
-console.log(str);
-console.log(JSON.parse(str));
+setTimeout(tic,5000)
+
+//setInterval
+setInterval(tic, 2000);
+
+//Рекурсивний варіант
+const id = setTimeout(function tack() {
+    tic()
+    setTimeout(tack, 2000)
+}, 2000);
