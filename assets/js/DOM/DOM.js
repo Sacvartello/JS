@@ -1,14 +1,19 @@
-//setTimeout
-function tic() {
-    console.log('tic');
+const myPromise = new Promise(executer)
+
+function executer(good, bad) {
+    let res
+    if (Math.random() > 0.5) {
+        res = ":)"
+        good(res)
+    } else {
+        res = ':('
+        bad(res)
+    }
 }
-setTimeout(tic,5000)
+myPromise.then(function (data) {
+    console.log('result:', data);
+}, function (data) {
+    console.log('error:', data);
+})
 
-//setInterval
-setInterval(tic, 2000);
-
-//Рекурсивний варіант
-const id = setTimeout(function tack() {
-    tic()
-    setTimeout(tack, 2000)
-}, 2000);
+console.log(myPromise);
