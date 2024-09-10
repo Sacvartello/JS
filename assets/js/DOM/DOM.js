@@ -17,3 +17,20 @@ myPromise.then(function (data) {
 })
 
 console.log(myPromise);
+
+//Task
+const promise1 = new Promise(ex)
+
+function ex (res){
+    res('som')
+}
+promise1.then(function (data) {
+    console.log(data);
+}).then(function (secData){
+    console.log(secData);
+    throw new Error('No')
+}).then(function(thirdData){
+    console.log('ops..');
+}).catch(function(err){
+    console.log('err :>> ', err);
+})
