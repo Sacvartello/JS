@@ -33,4 +33,6 @@ promise1.then(function (data) {
     console.log('ops..');
 }).catch(function(err){
     console.log('err :>> ', err);
+}).finally(()=>{
+    console.log('all');
 })
