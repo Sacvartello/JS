@@ -1,13 +1,14 @@
-const promise = fetch('https://randomuser.me/api/')
+//Async/await
 
-promise
-.then((value) =>{
-     console.log(value);
-     return value.json()
-})
-.then((json)=>{
-    console.log(json);
-})
-.catch((err)=>{
-    console.log(err);
-})
+const URL = 'https://fakestoreapi.com/users'
+
+async function loadData(url){
+    try {
+        const resp = await fetch(url)
+        const data = await resp.json()
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+loadData(URL)
